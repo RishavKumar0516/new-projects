@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap" rel="stylesheet"> 
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+
+        }
+        .container{
+            width:100%;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            
+        }
+        .bigbox{
+            width:350px;
+            height:500px;
+            border:5px solid tomato;
+        }
+        .box{
+            width:350px;
+            height:450px;
+            position:relative;
+            overflow:hidden;
+            
+        }
+        .image-container{
+            width:350px;
+            height:450px;
+        }
+        #image{
+            width:350px;
+            height:450px;
+            object-fit:center;
+            animation:zoom 3s linear infinite;
+        }
+         
+         @keyframes zoom {
+            0%{
+        		transform:scale(1.3);
+        	}
+        	15%{
+        		transform:scale(1);
+        	}
+        	85%{
+        		transform:scale(1);
+        	}
+        	100%{
+        		transform:scale(1.3);
+        	}
+         }
+
+       
+
+        .overlapper{
+            width:350px;
+            height:450px;
+            position:absolute;
+            left:0;
+            top:0;
+            background:linear-gradient(45deg,red,black);
+            opacity:.3;
+        }
+        .content{
+            width:350px;
+            height:450px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            position:absolute;
+            top:0;
+            left:0;
+
+        }
+        .content span{
+            color:black;
+            padding:8px 12px;
+            background:#fff;
+            border:2px solid black;
+            cursor:pointer;
+            box-shadow:2px 3px 5px 1px black;
+        }
+        .section{
+            width:100%;
+            box-sizing:border-box;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            flex-direction:column;
+        }
+        .price{
+            display:block;
+            padding-right:5px;
+            float:left;
+        }
+    </style>
+</head>
+<body onload="slider()">
+
+    <div class="container">
+        <div class="bigbox">
+        <div class="box">
+            <div class="image-container">
+                <img id="image" src="image/img1.jpg" alt="">
+                <div class="overlapper"></div>
+            </div>
+            <div class="content">
+                <span>buy now</span>
+            </div>
+            
+        </div>
+        <div class="section">
+            <div class="price">
+            <span>price</span>
+            <span>20$</span>
+            </div>
+            <a href="#">special</a>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+    	var slideImg= document.getElementById("image");
+    	var images= new Array(
+               "image/img5.jpg",
+               "image/img6.jpg",
+               "image/img7.jpg",
+               "image/img8.jpg"
+    		);
+    	var len=images.length;
+    	var i=0;
+    	function slider(){
+           if(i > len-1){
+             i=0;
+           }
+           slideImg.src = images[i];
+           i++;
+           setTimeout('slider()',3000);/* after 3 second these will run function again */
+    	}
+    </script>
+      
+
+    </body>
+ </html>

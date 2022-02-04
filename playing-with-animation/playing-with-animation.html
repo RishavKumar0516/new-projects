@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .container{
+            width:100%;
+            height:100vh;
+            border:5px solid black;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .header{
+            width:350px;
+            height:450px;
+            display:flex;
+            position:relative;
+            overflow:hidden;
+            border:5px double black;
+        }
+        .image-container{
+            width:350px;
+            height:450px;
+            background-image: url("image/img1.jpg");
+            object-fit: cover;
+            background-position:auto;
+            background-size:cover;
+            background-repeat:no-repeat;
+            transition:all;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+
+        animation-name:animate;
+        animation:slider 9s infinite ease-in-out;/* animation name timing duration timing function */
+        }
+
+        @keyframes slider{
+    0%{
+        background-image:url(image/img5.jpg);
+        transform:scale(1.3);
+
+    }
+    25%{
+        background-image:url(image/img6.jpg);
+        transform:scale(1.3);
+    }
+    75%{
+        background-image:url(image/img7.jpg);
+        transform:scale(1.3);
+    }
+    100%{
+        background-image:url(image/img8.jpg);
+        transform:scale(1.3);
+    }
+   
+}
+        
+       /* .img1{
+            width:350px;
+            height:450px;
+        }*/
+        .content{
+            width:350px;
+            height:450px;
+            background-image: url("image/img8.jpg");
+            background-position:center;
+            background-size:cover;
+            position:absolute;
+            bottom:-450px;
+            transition:3s;
+            
+        }
+
+      
+       /* .img2{
+            width:350px;
+            height:450px;
+        }*/
+
+        .header:hover .content{
+            bottom:0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="image-container">
+               <!-- <img class="img1" src="image/img1.jpg" alt="">-->
+            </div>
+            <div class="content">
+               <!-- <img class="img2" src="image/img8.jpg" alt="">-->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

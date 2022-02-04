@@ -1,0 +1,141 @@
+*{
+
+    margin:0;
+    padding:0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing:border-box;
+
+}
+.slide-container{
+    position:relative;
+    width:100%;
+    height:100vh;
+    background:deeppink;
+    overflow:hidden;
+}
+.slide-container .slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+     padding:50px 60px; 
+     clip-path: circle(0.0% at 50% 97%);
+
+}
+.slide-container .slide.active{
+    transition:1s;
+    transition-delay: 0s;
+    transition-property: clip-path;
+    clip-path: circle(150.8% at 50% 97%);
+}
+.slide-container .slide img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.slide-container .slide.active img{
+    transition: 1s;
+    transition-delay: 1s;
+    transform: scale(1.1);
+}
+ /* .slide-container .slide .content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    z-index: 2;
+    transform:translate(-50%, -50%);
+    padding:20px 30px;
+    background:rgba(0, 191, 255, 0.384); 
+   
+} 
+.slide-container .slide .content h2{
+    text-transform:uppercase;
+    font-weight:800;
+    letter-spacing: 1px;
+    line-height:30px;
+    padding:10px 0;
+    animation: fadeInUp;  referring directly to the animation's @keyframe declaration 
+    animation-duration: 3s;  don't forget to set a duration! 
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+
+}
+
+.slide-container .slide .content p{
+    
+    font-weight:500;
+    letter-spacing: 1px;
+    line-height:25px;
+    animation: fadeInUp;  referring directly to the animation's @keyframe declaration 
+    animation-duration: 2s;    don't forget to set a duration! 
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+} */
+.content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    z-index: 2;
+    transform:translate(-50%, -50%);
+    padding:20px 30px;
+    display:none;
+    /* background:rgba(0, 191, 255, 0.384); */
+   
+}
+.content h2{
+    text-transform:uppercase;
+    font-weight:800;
+    letter-spacing: 1px;
+    line-height:30px;
+    padding:10px 0;
+    animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 3s; /* don't forget to set a duration! */
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+
+}
+
+.content p{
+    
+    font-weight:500;
+    letter-spacing: 1px;
+    line-height:25px;
+    animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+}
+
+.prev,.next{
+    position:absolute;
+    top:45%;
+    font-size:25px;
+    padding:15px;
+    font-weight:800;
+    background:#828282;
+    border-radius:0 5px 5px 0;
+}
+.next{
+    right:0;
+    border-radius:5px 0 0 5px;
+}
+.navigation{
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+}
+.navigation .button{
+    width:20px;
+    height:20px;
+    border-radius:20px;
+    margin:20px;
+    background:lightslategrey;
+}
+.navigation .button.active{
+    background:rgb(8, 204, 211);
+}

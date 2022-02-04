@@ -1,0 +1,93 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.slide-container{
+    position:relative;
+    width:100%;
+    height:100vh;
+    background:aquamarine;
+}
+.slide-container .slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    padding:60px 80px;
+    transition:0.5s ease-in;
+    
+
+
+}
+.slide-container .slide img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    
+}
+.slide-container .slide .content{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+.slide-container .slide .content h1{
+    text-transform:uppercase;
+    font-weight:800;
+    letter-spacing: 1px;
+    line-height:30px;
+    padding:10px 0;
+}
+.slide-container .slide .content p{
+    
+    font-weight:500;
+    letter-spacing: 1px;
+    line-height:25px;
+    /* padding:10px 0; */
+}
+
+/* prev and next buttons */
+
+.prev,.next{
+    position:absolute;
+    top:45%;
+    width:auto;
+    padding:20px;
+    font-size:25px;
+    font-weight:900;
+    border-radius:0px 3px 3px 0px;
+    background:rgb(100, 99, 98);
+}
+.next{
+    right:0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*  The dots/circles */
+
+.navigation{
+    position:absolute;
+    z-index:2;
+    bottom:30px;
+    left:50%;
+    display:flex;
+    transform:translate(-50%);
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active{
+      background:blue;
+  }

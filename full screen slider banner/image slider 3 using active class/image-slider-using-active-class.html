@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image slider using active class</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body  onresize="myFunction()">
+    <div class="slide-container">
+
+        <div class="slide active">
+            <img src="../image slider 2 using javascript/img/one.jpg" alt="">
+            <div class="content center">
+                <h2>Image Slider creature</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis.
+                </p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="../image slider 2 using javascript/img/five.jpg" alt="">
+            <div class="content left">
+                <h2>Image Slider creature</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis.
+                </p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="../image slider 2 using javascript/img/four.jpg" alt="">
+            <div class="content right">
+                <h2>Image Slider creature</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis.
+                </p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="../image slider 2 using javascript/img/three.jpg" alt="">
+            <div class="content center">
+                <h2>Image Slider creature</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis.
+                </p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="../image slider 2 using javascript/img/two.jpg" alt="">
+            <div class="content right">
+                <h2>Image Slider creature</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis.
+                </p>
+            </div>
+        </div>
+
+                <!-- setting the previous and next buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <div class="navigation">
+              <div class="button active" onclick="currentslide(1)"></div>
+              <div class="button" onclick="currentslide(2)"></div>
+              <div class="button" onclick="currentslide(3)"></div>
+              <div class="button" onclick="currentslide(4)"></div>
+              <div class="button" onclick="currentslide(5)"></div>
+          </div>
+
+
+    </div>
+
+    <!-- java code -->
+
+    <script>
+
+        slideIndex = 1;
+        function plusSlides(n){
+            slideshow(slideIndex += n);
+        }
+        function currentslide(n){
+            slideshow(slideIndex = n);
+        }
+
+        function slideshow(index){
+           let slider = document.querySelectorAll(".slide");
+           let buttons = document.querySelectorAll(".button");
+
+           if(index > slider.length){
+               slideIndex = 1;
+           }
+           if(index < 1){
+               slideIndex = slider.length;
+           }
+
+           slider.forEach(element => {
+               element.classList.remove("active");
+           });
+           
+           buttons.forEach(element => {
+               element.classList.remove("active");
+           });
+   
+           slider[slideIndex-1].classList.add("active");
+           buttons[slideIndex-1].classList.add("active");
+
+        }
+
+        // function myFunction(){
+        //     let contents = document.querySelectorAll(".content");
+        //     let windowidth = window.outerWidth;/* getting the width of the screen */
+        //     if(windowidth < "700" ){/* if the width of the screen is less then the 500 then  we remove the left, right and center class and the add the right class in the each element of the array contents  */
+        //          contents.forEach(element => {
+        //              element.classList.remove("left","right","center");/* removing the left, right and center class from the each element of the array contents */
+        //              element.classList.add("right");/* adding the right class in the each element of the array contents */
+        //          });
+        //     }
+        //     if(windowidth > "1000"  ){/* if the width of the screen is greater then the 500 then  we remove the left, right and center class and the add the center class in the each element of the array contents  */
+        //          contents.forEach(element => {
+        //              element.classList.remove("left","right","center");/* removing the left, right and center class from the each element of the array contents */
+        //              element.classList.add("left");/* adding the center class in the each element of the array contents */
+        //          });
+        //     }
+        // }
+
+
+
+    </script>
+</body>
+</html>

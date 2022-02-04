@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment gateway practice</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+     <div class="top-section">
+        <p>
+            <spam class="left-icon">&#x2190;</spam>CHECKOUT<spam class="right-icon">&#xb7;&#xb7;&#xb7;</spam>    
+        </p>
+     </div> 
+     <div class="middle-section">
+         <h1>1599<span>$</span></h1>
+         <p>pay to F.tech</p>
+     </div> 
+     
+     <div class="bottom-box">
+        <button type="button"
+       class="payment-option-btn">
+       <a href="https://www.paypal.com/us/webapps/mpp/payflow-payment-gateway"></a> with PayPal</button>
+        <button type="button" class="payment-option-btn">Pay with NetBanking</button>
+
+       <div class="card-detail">
+           <p>Pay Using Debit Card</p>
+           <form action="">
+            <div class="card-num-field-group">
+                <label for="">Card Number</label><br>
+                <input type="text" class="card-num-field" placeholder="xxxx-xxxx-xxxx-xxxx" pattern="[0-9]{16}" required>
+            </div>
+
+            <div class="date-field-group">
+                <label for="">Expirey Date</label><br>
+                <input type="text" class="date-field" placeholder="mm" pattern="[0-9]{2}" required>
+                <input type="text" class="date-field" placeholder="yyyy" pattern="[0-9]{4}" required>
+            </div>
+
+            <div class="cvc-field-group">
+                <label for="">CVC</label><br>
+                <input type="passward" class="cvc-field" placeholder="xxx"  pattern="[0-9]{3}" required>
+            </div>
+
+
+            <div class="name-field-group">
+                <label for="">Card Holder Name</label><br>
+                <input type="text" class="name-field" placeholder="Rishav kumar"  pattern="[a-z A-z]+" required>
+            </div>
+            <input type="submit" class="pay-btn"></input>
+           </form>
+       </div>
+     </div>
+
+    </div>
+</body>
+</html>

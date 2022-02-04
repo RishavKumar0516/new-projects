@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image slider 5 sliding slider</title>
+    <link rel="stylesheet" href="sttyle.css">
+</head>
+<body>
+   <div class="slide-container">
+
+       <div class="fade slide active ">
+           <img src="../image slider 2 using javascript/img/four.jpg" alt="">
+           <h1 class="shade7">1sliding Slider</h1>
+       </div>
+       
+       <div class="fade slide">
+           <img src="../image slider 2 using javascript/img/three.jpg" alt="">
+           <h1 class="shade7">sliding Slider</h1>
+       </div>
+
+       <div class="fade slide">
+           <img src="../image slider 2 using javascript/img/five.jpg" alt="">
+           <h1 class="shade7">sliding Slider</h1>
+       </div>
+
+       <div class="fade slide">
+           <img src="../image slider 2 using javascript/img/one.jpg" alt="">
+           <h1 class="shade7">sliding Slider</h1>
+       </div>
+
+       <div class="fade slide">
+           <img src="../image slider 2 using javascript/img/two.jpg" alt="">
+           <h1 class="shade7">sliding Slider</h1>
+       </div>
+
+       <!-- prev and next buttons -->
+       <!-- setting the previous and next buttons -->
+       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+       <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+       <div class="navigation">
+        <div class="button active" onclick="currentslide(1)"></div>
+        <div class="button" onclick="currentslide(2)"></div>
+        <div class="button" onclick="currentslide(3)"></div>
+        <div class="button" onclick="currentslide(4)"></div>
+        <div class="button" onclick="currentslide(5)"></div>
+        </div>
+
+   </div>
+
+   <!-- java script code -->
+
+   <script>
+
+        let slideIndex = 1;
+
+        function plusSlides(n){
+            slideShow(slideIndex += n);
+        }
+
+        function currentslide(n){
+         slideShow(slideIndex = n);
+        }
+
+        function slideShow(index){
+           let slider = document.querySelectorAll(".slide");
+           let nav = document.querySelectorAll(".button");
+
+           if(index > slider.length){
+               slideIndex = 1;
+           }
+           if(index < 1){
+               slideIndex = slider.length;
+           }
+
+           slider.forEach(element => {
+             element.style.display = "none";
+            // element.classList.remove("active");
+           });
+
+           nav.forEach(element => {
+               element.classList.remove("active");
+           });
+
+          slider[slideIndex-1].style.display = "block";
+        // slider[slideIndex-1].classList.add("active");
+           nav[slideIndex-1].classList.add("active");
+        }
+
+
+        /* automatic slide show*/
+
+//         var slideIndex1 = 0;
+// carousel();
+
+// function carousel() {
+//   var i;
+//   var x = document.getElementsByClassName("slide");
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = "none";
+//   }
+//   slideIndex1++;
+//   if (slideIndex1 > x.length) {slideIndex1 = 1}
+//   x[slideIndex1-1].style.display = "block";
+//   setTimeout(carousel, 2000); // Change image every 2 seconds
+// }
+
+
+
+   </script>
+</body>
+</html>

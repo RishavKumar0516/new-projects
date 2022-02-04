@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full page scrolling effects</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .container{
+            position:relative;
+            width:100%;
+            height:100vh;
+            overflow:auto;
+            scroll-snap-type: y mandatory;
+        }
+        .container .section{
+            position:relative;
+            width:100%;
+            height:100%;
+            scroll-snap-align: start;
+        }
+        .container .section:nth-child(1){
+            background-image:url("pixel/pexels-stanislav-kondratiev-2977302.jpg");
+            background-size:cover;
+            background-position: center;
+            background-attachment:fixed;
+        }
+        .container .section:nth-child(2){
+            background-image:url("pixel/pexels-curioso-photography-288100.jpg");
+            background-size:cover;
+            background-position: center;
+            background-attachment:fixed;
+        }
+        .container .section:nth-child(3){
+            background-image:url("pixel/pexels-oziel-gómez-845405.jpg");
+            background-size:cover;
+            background-position: center;
+            background-attachment:fixed;
+        }
+        .container .section:nth-child(4){
+            background-image:url("pixel/pexels-fwstudio-129731.jpg");
+            background-size:cover;
+            background-position: center;
+            background-attachment:fixed;
+        }
+        .container .section .content{
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform:translate(-50%, -50%);
+            background:linear-gradient(45deg,#54b0cc 50%,#828282a1 50%);
+            padding:20px 30px;
+        }
+        .container .section .content h2{
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing:1px;
+            line-height:30px;
+            padding:5px 0px;
+        }
+        .container .section .content p{
+            font-weight:500;
+            line-height:25px;
+        }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="section">
+        <div class="content">
+          <h2>Section One Title</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. a. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="content">
+          <h2>Section Two Title</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. a. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="content">
+          <h2>Section Three Title</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. a. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+          </p>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="content">
+          <h2>Section Four Title</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. a. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

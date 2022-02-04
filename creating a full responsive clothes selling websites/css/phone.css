@@ -1,0 +1,255 @@
+/*  ----css code for responsive ------*/
+
+
+@media screen and ( max-width:1040px){
+    .logo{
+        font-size:25px;
+       
+    }
+    .home{
+        grid-template-rows:repeat(1,400px);
+        grid-template-columns: 430px 300px;
+        grid-gap:0 2em;
+        justify-content:center;
+    }
+    .h-primary{
+        font-size:2.8rem;
+    }
+
+    .button{
+        padding:10px 20px;
+        
+    }
+}
+@media screen and ( max-width:800px){
+    .home{
+        padding:50px 0px;
+        grid-template-rows:repeat(1,400px);
+        grid-template-columns: 400px 250px;
+    }
+    .section2 .carousel-cell{
+        margin-right:30px;
+        /* padding:20px 15px; */
+        width:250px;
+        height:400px;
+    }
+}
+/*for navigation*/
+@media screen and ( max-width:780px){
+    
+    .show-menu-btn,.hide-menu-btn{
+        display:block;
+        padding:0 10px;
+    }
+    .menu{
+        position:fixed;
+        width:100%;
+        height:100vh;
+        background:black;
+        right:-100%;
+        top:0;
+        text-align:center;
+        padding:80px 0px;
+        line-height:normal;
+        transition:0.7s;
+        z-index:1;
+    }
+    .menu a{
+        display:block;
+        padding:20px;
+    }
+    .hide-menu-btn{
+        position:absolute;
+        right:40px;
+        top:40px;
+    }
+    #chk:checked ~ .menu{
+        right:0px;
+    }
+
+
+.button{
+    padding:10px 20px;
+}
+
+
+
+.box{
+    margin-top:25px;
+}
+.box .btn1{
+    color:white;
+    border:3px solid white;
+}
+.box .btn2{
+    color:black;
+    border:3px solid white;
+    background:white;
+}
+
+}
+@media screen and ( max-width:711px){
+    .home{
+        grid-template-rows:repeat(1,400px);
+        grid-template-columns: 350px 210px;
+        justify-content:center;
+    }
+}
+@media screen and ( max-width:620px){
+    .home{
+        padding:10px 0px;
+        grid-template-rows:300px 230px;
+        grid-template-columns: auto;
+        grid-gap:2em;
+        justify-content:center;
+    }
+    .container1{
+        padding: 5px 13px;
+    }
+    .h-primary{
+        font-size:2.5rem;
+    }
+    .button{
+        padding:10px 10px;
+        
+    }
+    .section2{
+        position:relative;
+        margin:20px;
+        padding:20px 0px;
+    
+    }
+    .latest{
+        font-size:1.5em;
+     }
+}
+
+@media screen and ( max-width:550px){
+
+    .home{
+        padding:10px 0px;
+        grid-template-rows:350px 200px;
+        grid-template-columns: auto;
+        grid-gap:2em;
+        justify-content:center;
+    }
+.buy-now{
+    width:130px;
+    height:130px;
+    border-radius:130px;
+
+}
+.buy-now .item1{
+    font-size:1em;
+    padding-bottom:1px;
+}
+.buy-now .item2{
+   font-size:2rem;
+   padding-bottom: 3px;
+}
+
+.buy-now .item3{
+    font-size:1rem;
+    padding-bottom:3px;
+
+}
+}
+
+@media screen and ( max-width:350px){
+    .logo{
+        text-transform:uppercase;
+        line-height:80px;
+        font-size:1.3em;
+
+    }
+    .navbar{
+        height:80px;
+    }
+    .menu{
+        line-height:80px;
+    }
+    .show-menu-btn{
+        line-height:80px;
+    }
+    .show-menu-btn i{
+        line-height:80px;
+    }
+    .home{
+        height:80vh;
+        padding:10px 0px;
+        grid-template-rows:350px 140px;
+        grid-template-columns: auto;
+        grid-gap:0em;
+        justify-content:center;
+    }
+    .home::before{
+        height:80vh;
+    }
+    .home::after{
+        height:80vh;
+    }
+    .h-primary{
+        font-size:2rem;
+    }
+    
+    .h-secondary{
+        font-size:1em;
+    }
+.buy-now{
+    width:110px;
+    height:110px;
+    border-radius:110px;
+
+}
+
+.buy-now .item1{
+    font-size:.9em;
+    padding-bottom:1px;
+}
+.buy-now .item2{
+   font-size:1.9rem;
+   padding-bottom: 3px;
+}
+
+.buy-now .item3{
+    font-size:.9rem;
+    padding-bottom:3px;
+
+}
+    .button{
+        display:block;
+        padding:0px 15px;
+        cursor: pointer;
+        text-align:center;
+        height:30px;
+        line-height:30px;
+        margin:5px;
+        font-weight:0px;
+        font-size:.9rem;
+        
+    }
+    .latest{
+        margin-top:10px;
+        font-size:1em;
+     }
+     .section2 .carousel-cell{
+        margin-right:15px;
+        width:220px;
+        height:350px;
+    }
+    .section2 .image-container{
+        height:250px;
+        position:relative;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        transition:0.5s ease-in;
+        
+    }
+    .section2 .image-container .image-box2{
+        width:200px;
+        height:250px;
+        object-fit:cover;
+    }
+}
+

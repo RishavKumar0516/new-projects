@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create scroll using position fixed</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .header{
+            width:100%;
+            height:100vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border:5px double tomato;
+            
+        }
+        .container{
+            width:400px;
+            height:500px;
+            display:flex;
+            /*position:relative;*/
+            border:5px solid red;
+            
+
+        }
+        .image{
+            width:400px;
+            height:500px;
+        }
+        .content-section{
+            width:400px;
+            height:500px;
+            position:fixed;
+            right:-400px;
+            top:0px;
+        }
+        .container:hover .content-section{
+            right:0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="image-section1" id="img1">
+                <img src="r1.jpg" alt="" class="image">
+                <div class="content-section">
+                   <h2 class="medium-heading">the nature is calling</h2>
+                   <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                   minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                   in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

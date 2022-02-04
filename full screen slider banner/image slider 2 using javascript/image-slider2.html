@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slider 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slide-container">
+
+        <div class="slide">
+            <img src="img/one.jpg" alt="">
+            <div class="content">
+                <h1>Image Slider One</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="img/two.jpg" alt="">
+            <div class="content">
+                <h1>Image Slider Two</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="img/three.jpg" alt="">
+            <div class="content">
+                <h1>Image Slider Three</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="img/four.jpg" alt="">
+            <div class="content">
+                <h1>Image Slider Four</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="img/five.jpg" alt="">
+            <div class="content">
+                <h1>Image Slider Five</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                <p>incididunt ut labore et dolore magna aliqua. a. Ut enim ad minim veniam,</p>
+                <p>nostrud exercitation ullamco laboris nisi ut aliquip  commodo consequat.</p>
+                </p>
+            </div>
+        </div>
+
+        <!-- setting the previous and next buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- The dots/circles -->
+        <div class="navigation">
+            <span class="dot " onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot active" onclick="currentSlide(5)"></span>
+          </div>
+
+    </div>
+
+
+    <!-- java script -->
+
+    <script>
+        let slideIndex = 1;/* initializing a variabe slideIndex with 1 */
+
+
+
+        /* if any of the prev or next button is pressed then function plusSlides() gets called and also passes the argument,which gonna added with the slideIndex.
+            and these function calls the another function with passing the slideIndex  value. */
+        function plusSlides(n){
+              showslide(slideIndex += n);
+        }
+        
+
+        /* these currentSlide function gets called when any of the dot class element is clicked ,dot class element also gonna passing the value and these value gonna assign in the slideIndex variable and these current slide going to call the slideshow function   */
+        function currentSlide(n){
+            showslide(slideIndex = n);
+        }
+
+        function showslide(index){
+            let slider = document.querySelectorAll(".slide");
+            let circle = document.querySelectorAll(".dot");
+
+            if(index > slider.length){
+                slideIndex = 1;
+            }
+            if(index < 1){
+                slideIndex = slider.length;
+            }
+          /*  slider array kai saare element ko hum display none keriye ge ta ke koi image show na ho. */
+            for (i = 0; i < slider.length; i++) {
+                 slider[i].style.display = "none";
+             }
+            /*  circle array kai saare element sai active class ko remove ker dai ge ta ki koi elemnt active na ho. */
+             for (i = 0; i < circle.length; i++) {
+                //  circle[i].className = circle[i].className.replace(" active", "");
+                circle[i].classList.remove("active");
+            }
+        
+              /* ab hum slider kai slideIndex index pai jo element hai usko display block ker daige ta ki screen pai ye element show ho */
+            slider[slideIndex-1].style.display ="block";
+             /* ab hum circle kai slideIndex index pai jo element hai usme active class ko add ker daige ta ki yeh show ho */
+            circle[slideIndex-1].classList.add("active");
+        }
+
+
+
+    </script>
+
+    <!-- explaination of slideshow function -->
+
+    <!-- First, set the slideIndex to 1. (First picture)
+
+Then call  plusSlides() to display the first image.
+
+When the user clicks one of the buttons call  plusSlides().
+
+The  plusSlides() function subtracts one or  adds one to the slideIndex.
+
+The slideShow() function hides (display="none") all elements with the class name "Slider", and displays (display="block") the element with the given slideIndex.
+
+If the slideIndex is higher than the number of elements (slider.length), the slideIndex is set to zero.
+
+If the slideIndex is less than 1 it is set to number of elements (slider.length). -->
+</body>
+</html>

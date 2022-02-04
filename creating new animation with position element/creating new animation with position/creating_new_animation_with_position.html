@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<style>
+    *{
+     margin:0;
+     padding:0;
+
+    }
+    .container{
+        width:98%;
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        flex-wrap:wrap;
+        border:5px solid green;
+        margin-left:5px;
+
+    }
+    .image-section{
+        width:350px;
+        height:450px;
+        margin:20px 0px;
+        border:5px double red;
+        position:relative;
+        overflow:hidden;
+    }
+    .image{
+        width:350px;
+        height:450px;
+    }
+    .lines{
+        text-align:center;
+        font-size:2.5rem;
+        padding:25px 0px;
+        color:rgb(5, 105, 72);
+
+    }
+    .paragraph{
+        color:blueviolet;
+        font-size:1.5rem;
+        padding:15px 10px;
+        text-align:center;
+    }
+    .hover-box{
+        width:350px;
+        height:450px;
+        background: rgb(188, 240, 93);
+        position:absolute;
+        left:0px;
+        bottom:-500px;
+        transition:all;
+        transition-timing-function: ease-in-out;
+        transition-duration: 2s;
+    }
+    .image-section:hover .hover-box{
+        bottom:0px;
+    }
+
+    .hover-box2{
+        width:350px;
+        height:450px;
+        background: rgb(188, 240, 93);
+        position:absolute;
+        left:-400px;
+        bottom:0px;
+        transition:all;
+        transition-timing-function: ease-in-out;
+        transition-duration: 2s;
+    }
+    .image-section:hover .hover-box2{
+        left:0px;
+    }
+
+    .hover-box3{
+        width:350px;
+        height:450px;
+        background: rgb(188, 240, 93);
+        position:absolute;
+        top:-450px;
+        bottom:0px;
+        transition:all;
+        transition-timing-function: ease-in-out;
+        transition-duration: 2s;
+    }
+    .image-section:hover .hover-box3{
+        top:0px;
+    }
+
+    .hover-box4{
+        width:350px;
+        height:450px;
+        background: rgb(188, 240, 93);
+        position:absolute;
+        right:-400px;
+        bottom:0px;
+        transition:all;
+        transition-timing-function: ease-in-out;
+        transition-duration: 2s;
+    }
+    .image-section:hover .hover-box4{
+       right:0px;
+    }
+
+
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="image-section">
+        <img src="img/r1.jpg" alt="" class="image">
+        <div class="hover-box">
+            <h2 class="lines">welcome to scroll bar</h2>
+            <p class="paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+
+    <div class="image-section">
+        <img src="img/r1.jpg" alt="" class="image">
+        <div class="hover-box2">
+            <h2 class="lines">welcome to scroll bar</h2>
+            <p class="paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+
+    <div class="image-section">
+        <img src="img/r1.jpg" alt="" class="image">
+        <div class="hover-box3">
+            <h2 class="lines">welcome to scroll bar</h2>
+            <p class="paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+
+    <div class="image-section">
+        <img src="img/r1.jpg" alt="" class="image">
+        <div class="hover-box4">
+            <h2 class="lines">welcome to scroll bar</h2>
+            <p class="paragraph">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
